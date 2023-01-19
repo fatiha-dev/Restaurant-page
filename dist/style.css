@@ -1,0 +1,275 @@
+:root {
+    --font-color: #c01d1d;
+    --font-color-light: #D5CEA3;
+    --font-color-dark: #aaa;
+    --border-color: #222;
+    --background-light: #3d2b23cb;
+    --background-light-hover: #c0b988;
+    --background-dark: #3c2a21ee;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  
+  html {
+    font-size: 62.5%;
+    line-height: 1.6;
+  }
+  
+  body {
+    font-family: 'Bad Script', cursive;
+    /* font-family: 'Mulish', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Telex', sans-serif; */
+    font-size: 1.6rem;
+    color: var(--font-color);
+    background-image: url('images/pizzeria.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  
+  header {
+    font-size: 2.4rem;
+  }
+  
+  h1,
+  h2,
+  h3 {
+    line-height: 1.2
+  }
+  
+  a {
+    text-decoration: none;
+    color: var(--font-color);
+  }
+  
+  img {
+    display: block;
+    width: 100%;
+  }
+  img .home-img {
+    width: 90%;
+    height: 70%;
+    margin: 10px;
+  }
+  
+  button {
+    font-family: inherit;
+    color: inherit;
+    cursor: pointer;
+    border-style: none;
+    outline: none;
+  }
+  
+  /* Content */
+  
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+  }
+  
+  /* Header */
+  
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--background-light);
+    border-bottom: none;
+  }
+  
+  .restaurant-name {
+    margin-bottom: 1rem;
+    font-family: 'Bad Script', cursive;
+    color: #D5CEA3;
+    font-size: 7rem;
+  }
+  
+  .button-nav {
+    padding: 2rem;
+    font-size: 3rem;
+    background-color: transparent;
+    border-bottom: 2px solid transparent;
+    transition: transform 0.3s;
+  }
+  
+  .button-nav.active {
+    border-bottom: 2px solid var(--font-color-light);
+  }
+  
+  .button-nav:hover {
+    transform: translateY(-10%);
+    color: var(--background-light-hover);
+  }
+  
+  /* Main */
+  
+  .main {
+    max-width: 700px;
+    padding: 4rem;
+    margin: auto;
+    font-size: 2rem;
+    background-color: var(--background-light);
+    border: none;
+    margin-top: 20px;
+  }
+  
+  /* Home page */
+  
+  .home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 525px;
+    width: 618px;
+    animation: fadeIn 1.5s;
+  }
+  
+  .home p {
+    padding: 1rem;
+    color: var(--background-light-hover);
+    font-size: 3rem;
+    font-weight: bold;
+  }
+  
+  .home img {
+    width: 50%;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    opacity: 90%;
+  }
+  
+  /* Menu page */
+  
+  .menu {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 4rem;
+    animation: fadeIn 1.5s;
+  }
+  
+  .menu-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    padding: 4rem;
+    cursor: pointer;
+    background-color: var(--background-light);
+    transition: background-color 0.3s;
+  }
+  
+  .menu-item:hover {
+    background-color: var(--background-light-hover);
+  }
+  
+  .menu-item img {
+    width: 60%;
+  }
+  
+  .menu-item h2 {
+    padding: 2rem;
+  }
+  
+  .menu-item p {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  
+  /* Contact page */
+  
+  .contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 525px;
+    width: 618px;
+    animation: fadeIn 1.5s;
+  }
+  
+  .contact p {
+    width: 100%;
+    padding: 1rem;
+    color: var(--font-color-light);
+  }
+  
+  .contact img {
+    max-height: 420px;
+    padding: 1rem;
+    opacity: 90%;
+  }
+
+  
+  /* Scrollbar */
+  
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: var(--background-dark)
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--font-color-dark);
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: var(--font-color-light);
+  }
+  
+  /* Animations */
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+  
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  /* Media queries */
+  
+  @media (max-width: 700px) {
+    .home,
+    .contact {
+      height: 100%;
+      width: 100%;
+    }
+  
+    .menu {
+      grid-template-columns: 1fr;
+    }
+  
+    .menu img {
+      width: 50%;
+    }
+  }
+  
+  @media (max-width: 500px) {
+    html {
+      font-size: 57.5%;
+    }
+  
+    .home img {
+      width: 80%;
+    }
+  }
+
+  
